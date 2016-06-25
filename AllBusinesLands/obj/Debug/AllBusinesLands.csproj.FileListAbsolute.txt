@@ -86,3 +86,5 @@ C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\Al
 C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.csprojResolveAssemblyReference.cache
 C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.dll
 C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.pdb
+C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.initial_migration.resources
+C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.csproj.GenerateResource.Cache
