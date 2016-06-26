@@ -177,9 +177,15 @@
     <Compile Include="Migrations\201606230116006_initial_migration.Designer.cs">
       <DependentUpon>201606230116006_initial_migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606261042511_Create_Bienes_Comentarios_Tables.cs" />
+    <Compile Include="Migrations\201606261042511_Create_Bienes_Comentarios_Tables.Designer.cs">
+      <DependentUpon>201606261042511_Create_Bienes_Comentarios_Tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
+    <Compile Include="Models\Bien.cs" />
+    <Compile Include="Models\Comentario.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -256,6 +262,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606230116006_initial_migration.resx">
       <DependentUpon>201606230116006_initial_migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606261042511_Create_Bienes_Comentarios_Tables.resx">
+      <DependentUpon>201606261042511_Create_Bienes_Comentarios_Tables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
