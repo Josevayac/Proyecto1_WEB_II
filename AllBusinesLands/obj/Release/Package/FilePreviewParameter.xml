@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="allbusinessland" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\JoseMa\\Documents\\UTN_Marcial\\WEB\ II\\Primer_proyecto\\Clonado\\Proyecto1_WEB_II\\AllBusinesLands\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\JoseMa\\Documents\\UTN_Marcial\\WEB\ II\\Primer_proyecto\\Clonado\\Proyecto1_WEB_II\\AllBusinesLands\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=tcp:proyectos-web2.database.windows.net,1433;Initial Catalog=allbusinessland;User ID=walheresq@proyectos-web2;Password=$Wal220891" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\JoseMa\\Documents\\UTN_Marcial\\WEB\ II\\Primer_proyecto\\Clonado\\Proyecto1_WEB_II\\AllBusinesLands\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
