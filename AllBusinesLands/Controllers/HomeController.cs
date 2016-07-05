@@ -13,6 +13,7 @@ namespace AllBusinesLands.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrador")]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,6 +21,7 @@ namespace AllBusinesLands.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrador, Usuario")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
