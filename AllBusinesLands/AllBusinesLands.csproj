@@ -168,6 +168,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BienesController.cs" />
+    <Compile Include="Controllers\ComentariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -184,6 +186,10 @@
     <Compile Include="Migrations\201607050540228_AddEstadoUserTable.cs" />
     <Compile Include="Migrations\201607050540228_AddEstadoUserTable.Designer.cs">
       <DependentUpon>201607050540228_AddEstadoUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607070931167_actualiza7-7-16.cs" />
+    <Compile Include="Migrations\201607070931167_actualiza7-7-16.Designer.cs">
+      <DependentUpon>201607070931167_actualiza7-7-16.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -256,6 +262,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Bienes\Create.cshtml" />
+    <Content Include="Views\Bienes\Delete.cshtml" />
+    <Content Include="Views\Bienes\Details.cshtml" />
+    <Content Include="Views\Bienes\Edit.cshtml" />
+    <Content Include="Views\Bienes\Index.cshtml" />
+    <Content Include="Views\Comentarios\Create.cshtml" />
+    <Content Include="Views\Comentarios\Delete.cshtml" />
+    <Content Include="Views\Comentarios\Details.cshtml" />
+    <Content Include="Views\Comentarios\Edit.cshtml" />
+    <Content Include="Views\Comentarios\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -277,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607050540228_AddEstadoUserTable.resx">
       <DependentUpon>201607050540228_AddEstadoUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607070931167_actualiza7-7-16.resx">
+      <DependentUpon>201607070931167_actualiza7-7-16.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
