@@ -181,6 +181,10 @@
     <Compile Include="Migrations\201606261042511_Create_Bienes_Comentarios_Tables.Designer.cs">
       <DependentUpon>201606261042511_Create_Bienes_Comentarios_Tables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607050540228_AddEstadoUserTable.cs" />
+    <Compile Include="Migrations\201607050540228_AddEstadoUserTable.Designer.cs">
+      <DependentUpon>201607050540228_AddEstadoUserTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
@@ -270,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606261042511_Create_Bienes_Comentarios_Tables.resx">
       <DependentUpon>201606261042511_Create_Bienes_Comentarios_Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607050540228_AddEstadoUserTable.resx">
+      <DependentUpon>201607050540228_AddEstadoUserTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
