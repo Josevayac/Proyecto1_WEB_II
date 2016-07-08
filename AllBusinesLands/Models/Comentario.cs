@@ -27,6 +27,8 @@ namespace AllBusinesLands.Models
         [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
         public DateTime HoraIngreso { get; set; }
 
+        public bool Estado { get; set; }
+
         public virtual Bien Bien { get; set; }
     }
 }
