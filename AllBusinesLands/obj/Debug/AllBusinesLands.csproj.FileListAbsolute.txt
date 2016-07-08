@@ -271,3 +271,4 @@ D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLa
 D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.dll
 D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.pdb
 D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.AddEstadoUserTable.resources
+D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.AddEstadoTableBienesComentarios.resources

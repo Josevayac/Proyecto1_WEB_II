@@ -30,7 +30,6 @@ namespace AllBusinesLands.Models
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
-
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime FechaIngreso { get; set; }
@@ -38,6 +37,9 @@ namespace AllBusinesLands.Models
         [DataType(DataType.Time)]
         [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
         public DateTime HoraIngreso { get; set; }
+
+        [Required]
+        public bool Estado { get; set; }
 
         public virtual ICollection<Comentario> Comentarios { get; set; }
     }
