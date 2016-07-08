@@ -272,3 +272,6 @@ D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLa
 D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.pdb
 D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.AddEstadoUserTable.resources
 D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.AddEstadoTableBienesComentarios.resources
+C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.Create_Bienes_Comentarios_Tables.resources
+C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.AddEstadoUserTable.resources
+C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.AddEstadoTableBienesComentarios.resources

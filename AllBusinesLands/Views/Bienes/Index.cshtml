@@ -1,0 +1,17 @@
+﻿@model IEnumerable<AllBusinesLands.Models.Bien>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="container">
+    <div class="row col-md-offset-1" id="contenedor">
+        @Html.Partial("_BienesPartial", Model);
+    </div>
+</div>
