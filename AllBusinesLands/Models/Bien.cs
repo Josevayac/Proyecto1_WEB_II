@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace AllBusinesLands.Models
         public double Precio { get; set; }
 
         [Required]
+        [DisplayName("Teléfono")]
         public string Telefono { get; set; }
 
         [Required]
@@ -32,10 +34,12 @@ namespace AllBusinesLands.Models
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayName("Fecha de ingreso")]
         public DateTime FechaIngreso { get; set; }
 
         [DataType(DataType.Time)]
-        [DisplayFormat(DataFormatString = "{0:hh:mm}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:hh:mm tt}", ApplyFormatInEditMode = true)]
+        [DisplayName("Hora de ingreso")]
         public DateTime HoraIngreso { get; set; }
 
         [Required]
