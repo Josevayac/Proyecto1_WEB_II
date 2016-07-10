@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BienesController.cs" />
+    <Compile Include="Controllers\ComentariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
@@ -190,6 +191,14 @@
     <Compile Include="Migrations\201607080528296_AddEstadoTableBienesComentarios.cs" />
     <Compile Include="Migrations\201607080528296_AddEstadoTableBienesComentarios.Designer.cs">
       <DependentUpon>201607080528296_AddEstadoTableBienesComentarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607090836455_add_user_comentarios.cs" />
+    <Compile Include="Migrations\201607090836455_add_user_comentarios.Designer.cs">
+      <DependentUpon>201607090836455_add_user_comentarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607090858546_DeleteRequieredId.cs" />
+    <Compile Include="Migrations\201607090858546_DeleteRequieredId.Designer.cs">
+      <DependentUpon>201607090858546_DeleteRequieredId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -268,6 +277,14 @@
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Shared\_BienesPartial.cshtml" />
     <Content Include="Views\Bienes\Index.cshtml" />
+    <Content Include="Views\Comentarios\Create.cshtml" />
+    <Content Include="Views\Comentarios\Delete.cshtml" />
+    <Content Include="Views\Comentarios\Details.cshtml" />
+    <Content Include="Views\Comentarios\Edit.cshtml" />
+    <Content Include="Views\Comentarios\Index.cshtml" />
+    <Content Include="Views\Bienes\Details.cshtml" />
+    <Content Include="Views\Bienes\Edit.cshtml" />
+    <Content Include="Views\Bienes\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -292,6 +309,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607080528296_AddEstadoTableBienesComentarios.resx">
       <DependentUpon>201607080528296_AddEstadoTableBienesComentarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607090836455_add_user_comentarios.resx">
+      <DependentUpon>201607090836455_add_user_comentarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607090858546_DeleteRequieredId.resx">
+      <DependentUpon>201607090858546_DeleteRequieredId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
