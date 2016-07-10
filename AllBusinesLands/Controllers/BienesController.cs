@@ -24,6 +24,11 @@ namespace AllBusinesLands.Controllers
         // GET: Bienes/Details/5
         public async Task<ActionResult> Details(int? id)
         {
+            var userName = from cu in db.Comentario
+                                      join u in db.Users on cu.UserId equals u.Id
+                                      select u.UserName;
+
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

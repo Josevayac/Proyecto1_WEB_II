@@ -1,0 +1,129 @@
+﻿@using AllBusinesLands.Models
+@model AllBusinesLands.Models.Bien
+
+@{
+    ViewBag.Title = "Details";
+    ApplicationDbContext db = new ApplicationDbContext();
+}
+
+
+
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bien</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detalle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comentarios)
+        </dt>
+        <dd>
+            <div class="container">
+                <div>
+                    @Html.ActionLink("Create", "Create", "Comentarios", new { id = Model.Id }, null)
+                    @*<th>Contenido</th>
+                        <th>Usuario</th>*@
+                    @*@if (User.IsInRole("Administrador"))
+                        {
+                            <p>Acción</p>
+                        }*@
+                </div>
+
+                @foreach (var item in Model.Comentarios)
+                {
+                    <div>
+                        @{
+                            var userName = from users in db.Users
+                                           where users.Id == item.UserId
+                                           select users.UserName;
+                        }
+
+                        <strong>@Html.DisplayFor(modelItem => userName)</strong> <br /> <br />
+                        @Html.DisplayFor(modelItem => item.Contenido) <br /> <br />
+
+                        @if (User.IsInRole("Administrador"))
+                        {
+                            <p>
+                                @Html.ActionLink("Edit", "Edit", "Comentarios", new { id = item.Id }, null)
+
+                                @Html.ActionLink("Editar", "Edit", new { controller = "Comentarios", id = item.Id }, new { @class = "btn btn-warning" })
+
+
+
+                            </p>
+                        }
+                    </div>
+                            }
+            </div>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

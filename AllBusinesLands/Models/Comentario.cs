@@ -13,8 +13,10 @@ namespace AllBusinesLands.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Display(Name="N° Anuncio")]
         public int BienId { get; set; }
+        
+        public string UserId { get; set; }
 
         [Required]
         public string Contenido { get; set; }
@@ -30,5 +32,6 @@ namespace AllBusinesLands.Models
         public bool Estado { get; set; }
 
         public virtual Bien Bien { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }
