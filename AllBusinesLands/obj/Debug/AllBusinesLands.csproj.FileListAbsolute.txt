@@ -277,3 +277,5 @@ C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\Al
 C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.AddEstadoTableBienesComentarios.resources
 C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.add_user_comentarios.resources
 C:\Users\JoseMa\Documents\UTN_Marcial\WEB II\Primer_proyecto\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.DeleteRequieredId.resources
+D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.add_user_comentarios.resources
+D:\Documentos\Universidad 2016\Programación Web 2\Proyecto1_WEB_II\AllBusinesLands\obj\Debug\AllBusinesLands.Migrations.DeleteRequieredId.resources
