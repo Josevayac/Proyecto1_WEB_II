@@ -1,4 +1,6 @@
-﻿@model IEnumerable<AllBusinesLands.Models.Bien>
+﻿@using AllBusinesLands.Models
+@using Microsoft.AspNet.Identity
+@model IEnumerable<AllBusinesLands.Models.Bien>
 
 
 @foreach (var item in Model)
@@ -16,6 +18,9 @@
             @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
             @Html.ActionLink("Details", "Details", new {id = item.Id}) |
             @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+
+
+            @*@Html.ActionLink("Enviar", "Contact", "Home", new { id = User.Identity.GetUserId() }, null)*@
         </div>
 
         
