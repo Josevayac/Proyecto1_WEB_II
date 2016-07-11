@@ -206,6 +206,7 @@
     <Compile Include="Models\Bien.cs" />
     <Compile Include="Models\Comentario.cs" />
     <Compile Include="Models\EditUserViewModel.cs" />
+    <Compile Include="Models\EmailFormModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -285,6 +286,7 @@
     <Content Include="Views\Bienes\Details.cshtml" />
     <Content Include="Views\Bienes\Edit.cshtml" />
     <Content Include="Views\Bienes\Create.cshtml" />
+    <Content Include="Views\Home\Sent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
