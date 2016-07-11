@@ -58,11 +58,11 @@ namespace AllBusinesLands
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "955799441790-vc89iqv4ao102qm87v6dll8rr4oovbnr.apps.googleusercontent.com",
+                ClientSecret = "O4zt3pd0ilXrbxbF0sMdQjUz"
+            });
         }
     }
 }

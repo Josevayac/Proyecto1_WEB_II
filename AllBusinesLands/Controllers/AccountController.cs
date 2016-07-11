@@ -390,6 +390,7 @@ namespace AllBusinesLands.Controllers
                 if (result.Succeeded)
                 {
                     result = await UserManager.AddLoginAsync(user.Id, info.Login);
+                    await this.UserManager.AddToRoleAsync(user.Id, "Usuario");
                     if (result.Succeeded)
                     {
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
