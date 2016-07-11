@@ -166,7 +166,7 @@ namespace AllBusinesLands.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Estado = true };
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, Estado = true };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -181,7 +181,7 @@ namespace AllBusinesLands.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirmar cuenta", "Para confirmar la cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Bienes");
                 }
                 AddErrors(result);
             }
@@ -410,7 +410,7 @@ namespace AllBusinesLands.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Bienes");
         }
 
         //
@@ -467,7 +467,7 @@ namespace AllBusinesLands.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Bienes");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

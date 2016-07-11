@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace AllBusinesLands.Models
@@ -64,6 +65,10 @@ namespace AllBusinesLands.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [DisplayName("Usuario")]
+        public string UserName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]
