@@ -80,7 +80,8 @@ namespace AllBusinesLands.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.BienId = new SelectList(db.Bien, "Id", "Titulo", comentario.BienId);
+            //ViewBag.BienId = new SelectList(db.Bien, "Id", "Titulo", comentario.BienId);
+            ViewBag.BienId = comentario.BienId;
             return View(comentario);
         }
 
@@ -89,13 +90,16 @@ namespace AllBusinesLands.Controllers
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,BienId,Contenido,FechaIngreso,HoraIngreso,Estado")] Comentario comentario)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,BienId,Contenido,Estado")] Comentario comentario)
         {
             if (ModelState.IsValid)
             {
+                comentario.UserId = User.Identity.GetUserId();
+                comentario.FechaIngreso = System.DateTime.Now;
+                comentario.HoraIngreso = System.DateTime.Now;
                 db.Entry(comentario).State = EntityState.Modified;
                 await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Bienes", new { id = comentario.BienId });
             }
             ViewBag.BienId = new SelectList(db.Bien, "Id", "Titulo", comentario.BienId);
             return View(comentario);
