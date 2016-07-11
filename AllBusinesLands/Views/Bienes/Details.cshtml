@@ -8,7 +8,7 @@
 
 <h2>Detalles</h2>
 
-<div class="container">
+<div>
     <h4>@Model.Titulo</h4>
     <hr />
     <div class="row">
@@ -77,11 +77,30 @@
         </dl>
     </div>
     <hr />
-    
-    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+    @Html.DisplayNameFor(model => model.Comentarios)
+
+
+    <div class="container">
         <div>
-            <h2>@Html.DisplayNameFor(model => model.Comentarios)</h2>
-            @Html.ActionLink("Create", "Create", "Comentarios", new { id = Model.Id }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Create", "Create", "Comentarios", new { id = Model.Id }, null)
+            @*<th>Contenido</th>
+                <th>Usuario</th>*@
+            @*@if (User.IsInRole("Administrador"))
+                {
+                    <p>Acción</p>
+                }*@
         </div>
 
         @foreach (var item in Model.Comentarios)
