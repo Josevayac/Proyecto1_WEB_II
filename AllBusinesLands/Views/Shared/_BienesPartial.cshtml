@@ -3,15 +3,41 @@
 
 @foreach (var item in Model)
 {
-    <div class="col-md-3" style="padding: 10px 0px 10px 0px; margin: 25px 25px 25px 25px; background-color: #00BFFF; border-radius: 10px; text-align: center">
-        <img src="https://www.seeklogo.net/wp-content/uploads/2015/09/uefa-euro-2016-logo-vector-download.jpg" width="150px" height="150px">
-        <p>@Html.DisplayFor(modelItem => item.Titulo)</p>
-        <p>@Html.DisplayFor(modelItem => item.Detalle)</p>
-        <p>@Html.DisplayFor(modelItem => item.Precio)</p>
-        <p>@Html.DisplayFor(modelItem => item.Telefono)</p>
-        <p>@Html.DisplayFor(modelItem => item.Email)</p>
-        <p>@Html.DisplayFor(modelItem => item.FechaIngreso)</p>
-        <p>@Html.DisplayFor(modelItem => item.HoraIngreso)</p>
+    <div id="bien" class="col-md-12 row">
+        <div class="col-md-4">
+            <img src="https://www.seeklogo.net/wp-content/uploads/2015/09/uefa-euro-2016-logo-vector-download.jpg" width="150px" height="150px">
+        </div>
+        <dl class="dl-horizontal col-md-4" style="background-color:blue">
+            <dt>
+                <label>Título</label>
+            </dt>
+
+            <dd>
+                <p>@Html.DisplayFor(modelItem => item.Titulo)</p>
+            </dd>
+
+            <dt>
+                <label>Detalle</label>
+            </dt>
+
+            <dd>
+                <p>@Html.DisplayFor(modelItem => item.Detalle)</p>
+            </dd>
+
+            <dt>
+                <label>Precio</label>
+            </dt>
+
+            <dd>
+                <p>@Html.DisplayFor(modelItem => item.Precio)</p>
+            </dd>
+        </dl>
+        <div class="col-md-4">
+            <p>@Html.DisplayFor(modelItem => item.Telefono)</p>
+            <p>@Html.DisplayFor(modelItem => item.Email)</p>
+            <p>@Html.DisplayFor(modelItem => item.FechaIngreso)</p>
+            <p>@Html.DisplayFor(modelItem => item.HoraIngreso)</p>
+        </div>
         <div>
             @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
             @Html.ActionLink("Details", "Details", new {id = item.Id}) |
