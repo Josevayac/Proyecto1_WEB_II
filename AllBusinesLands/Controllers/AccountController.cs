@@ -171,8 +171,8 @@ namespace AllBusinesLands.Controllers
                 if (result.Succeeded)
                 {
                     // Asignar rol al usuario 
-                    await this.UserManager.AddToRoleAsync(user.Id, "Usuario");
-
+                    //await this.UserManager.AddToRoleAsync(user.Id, "Usuario");
+                    await this.UserManager.AddToRoleAsync(user.Id, "Administrador");
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // Para obtener más información sobre cómo habilitar la confirmación de cuenta y el restablecimiento de contraseña, visite http://go.microsoft.com/fwlink/?LinkID=320771

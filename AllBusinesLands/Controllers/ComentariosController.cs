@@ -16,6 +16,7 @@ namespace AllBusinesLands.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [Authorize(Roles = "Administrador")]
         // GET: Comentarios
         public async Task<ActionResult> Index()
         {
@@ -23,6 +24,7 @@ namespace AllBusinesLands.Controllers
             return View(await comentario.ToListAsync());
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: Comentarios/Details/5
         public async Task<ActionResult> Details(int? id)
         {
@@ -38,6 +40,7 @@ namespace AllBusinesLands.Controllers
             return View(comentario);
         }
 
+        [Authorize(Roles = "Administrador, Usuario")]
         // GET: Comentarios/Create
         public ActionResult Create(int id)
         {
@@ -46,6 +49,7 @@ namespace AllBusinesLands.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrador, Usuario")]
         // POST: Comentarios/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -68,6 +72,7 @@ namespace AllBusinesLands.Controllers
             return View(comentario);
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: Comentarios/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
@@ -85,6 +90,7 @@ namespace AllBusinesLands.Controllers
             return View(comentario);
         }
 
+        [Authorize(Roles = "Administrador")]
         // POST: Comentarios/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -105,6 +111,7 @@ namespace AllBusinesLands.Controllers
             return View(comentario);
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: Comentarios/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
@@ -120,6 +127,7 @@ namespace AllBusinesLands.Controllers
             return View(comentario);
         }
 
+        [Authorize(Roles = "Administrador")]
         // POST: Comentarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

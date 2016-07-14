@@ -37,12 +37,14 @@ namespace AllBusinesLands.Controllers
             }
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: /Usuarios/
         public async Task<ActionResult> Index()
         {
             return View(await UserManager.Users.ToListAsync());
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: /Usarios/Detalles/5
         public async Task<ActionResult> Details(string id)
         {
@@ -55,6 +57,7 @@ namespace AllBusinesLands.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: /Usuarios/Edit/1
         public async Task<ActionResult> Edit(string id)
         {
@@ -77,6 +80,7 @@ namespace AllBusinesLands.Controllers
             });
         }
 
+        [Authorize(Roles = "Administrador")]
         // POST: /Usuarios/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]

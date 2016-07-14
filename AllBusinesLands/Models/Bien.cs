@@ -45,6 +45,8 @@ namespace AllBusinesLands.Models
         [Required]
         public bool Estado { get; set; }
 
+        public string image_path { set; get; }
+
         public virtual ICollection<Comentario> Comentarios { get; set; }
     }
 }
