@@ -200,6 +200,10 @@
     <Compile Include="Migrations\201607090858546_DeleteRequieredId.Designer.cs">
       <DependentUpon>201607090858546_DeleteRequieredId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607120205180_add-migration ultimoscambios.cs" />
+    <Compile Include="Migrations\201607120205180_add-migration ultimoscambios.Designer.cs">
+      <DependentUpon>201607120205180_add-migration ultimoscambios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDBContext.cs" />
@@ -290,6 +294,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\upload\bienes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -317,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607090858546_DeleteRequieredId.resx">
       <DependentUpon>201607090858546_DeleteRequieredId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607120205180_add-migration ultimoscambios.resx">
+      <DependentUpon>201607120205180_add-migration ultimoscambios.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

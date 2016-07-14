@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
@@ -15,12 +16,14 @@ namespace AllBusinesLands.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [Authorize(Roles = "Administrador, Usuario")]
         // GET: Bienes
         public async Task<ActionResult> Index()
         {
             return View(await db.Bien.ToListAsync());
         }
 
+        [Authorize(Roles = "Administrador, Usuario")]
         // GET: Bienes/Details/5
         public async Task<ActionResult> Details(int? id)
         {
@@ -41,21 +44,27 @@ namespace AllBusinesLands.Controllers
             return View(bien);
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: Bienes/Create
         public ActionResult Create()
         {
             return View();
         }
 
+        [Authorize(Roles = "Administrador")]
         // POST: Bienes/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Titulo,Detalle,Precio,Telefono,Email,FechaIngreso,HoraIngreso,Estado")] Bien bien)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Titulo,Detalle,Precio,Telefono,Email,FechaIngreso,HoraIngreso,Estado")] Bien bien, HttpPostedFileBase image)
         {
             if (ModelState.IsValid)
             {
+                //var filename = image.FileName;
+                //var filePathOriginal = Server.MapPath("/content/uploads/bienes");
+                //string savedFileName = Path.Combine(filePathOriginal, filename);
+                //bien.image_path = @"/content/uploads/bienes/" + filename;
                 db.Bien.Add(bien);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -64,6 +73,7 @@ namespace AllBusinesLands.Controllers
             return View(bien);
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: Bienes/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
@@ -79,6 +89,7 @@ namespace AllBusinesLands.Controllers
             return View(bien);
         }
 
+        [Authorize(Roles = "Administrador")]
         // POST: Bienes/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -95,6 +106,7 @@ namespace AllBusinesLands.Controllers
             return View(bien);
         }
 
+        [Authorize(Roles = "Administrador")]
         // GET: Bienes/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
@@ -110,6 +122,7 @@ namespace AllBusinesLands.Controllers
             return View(bien);
         }
 
+        [Authorize(Roles = "Administrador")]
         // POST: Bienes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
